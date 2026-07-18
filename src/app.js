@@ -4,6 +4,7 @@ const errorHandler = require('./middlewares/errorHandler');
 const jobRoutes = require('./routes/jobRoutes');
 const saleRoutes = require('./routes/saleRoutes');
 const withdrawalRoutes = require('./routes/withdrawalRoutes');
+const payoutRoutes = require('./routes/payoutRoutes');
 
 const createApp = () => {
   const app = express();
@@ -16,6 +17,7 @@ const createApp = () => {
   app.use('/api/jobs', jobRoutes);
   app.use('/api/admin/sales', saleRoutes);
   app.use('/api/users', withdrawalRoutes);
+  app.use('/api/payouts', payoutRoutes);
 
   app.use(errorHandler);
   return app;
