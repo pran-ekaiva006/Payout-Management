@@ -3,6 +3,7 @@ const sendSuccess = require('./utils/apiResponse');
 const errorHandler = require('./middlewares/errorHandler');
 const jobRoutes = require('./routes/jobRoutes');
 const saleRoutes = require('./routes/saleRoutes');
+const withdrawalRoutes = require('./routes/withdrawalRoutes');
 
 const createApp = () => {
   const app = express();
@@ -14,6 +15,7 @@ const createApp = () => {
 
   app.use('/api/jobs', jobRoutes);
   app.use('/api/admin/sales', saleRoutes);
+  app.use('/api/users', withdrawalRoutes);
 
   app.use(errorHandler);
   return app;
