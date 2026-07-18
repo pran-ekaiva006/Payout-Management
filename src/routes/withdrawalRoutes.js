@@ -3,6 +3,6 @@ const { withdraw } = require('../controllers/withdrawalController');
 
 const router = express.Router({ mergeParams: true });
 
-router.post('/withdraw', withdraw);
+router.post('/:id/withdraw', withdraw);
 
 module.exports = router;
